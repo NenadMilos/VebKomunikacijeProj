@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../ss.css">
+    <link rel="icon" href="../images/logo.png">
+    <title> Pro athlete </title>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="../images/logo.png">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html"> Pocetna </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="kontakt.html"> Kontakt </a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="O nama.html"> O nama </a>
+          </li>
+        </ul>
+    </div>  
+
+    <div class="wrapper">
+        <form name="registracija" method="post" onsubmit="potvrdiFormu(event)">
+            <h1> kontakt </h1>
+            <div class="input-box">
+                <input type="text"  id="email"  name="email" placeholder="E-mail" 
+                required>
+
+            </div>
+
+            <div class="input-box">
+                <input type="password"  id="lozinka" name="lozinka"  nameplaceholder="Password" 
+                required>
+
+            </div>
+
+            <div class="input-box">
+                <input type="number"  id="brtelefona" name="brtelefona"  placeholder="Broj telefona" 
+                required>
+
+            </div>
+
+            <button type="submit" class="btn"> Posalji </button>
+        </form>
+    </div>
+    <script>
+      let f = registracija;
+
+let email = f.email;
+let lozinka = f.lozinka;
+let brtelefona = f.brtelefona;
+
+
+function potvrdiFormu(event){
+    event.preventDefault();
+    
+    console.log("Email: " + email.value);
+    console.log("Lozinka: " + lozinka.value);
+    console.log("Broj telefona: " + brtelefona.value);
+}
+    </script>
+</body>
+</html>
